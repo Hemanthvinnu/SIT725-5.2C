@@ -1,21 +1,52 @@
 .navbar-size {
-width: 95%;
-margin: 0 auto;
+    width: 95%;
+    margin: 0 auto;
 }
 .user-image-size {
-height: 56px;
-margin: 4px 0;
+    height: 56px;
+    margin: 4px 0;
 }
 .main-body {
-background-color: #F28487;
-color: white;
-height: calc(100vh - 64px);
+    background-color: #fce4ec; 
+    min-height: 100vh; 
+    padding-bottom: 50px; 
 }
 .materialboxed-image {
-margin: 0 auto;
-height: 400px;
+    margin: 0 auto;
+    height: 400px;
 }
 .click-me-button {
-background-color: #EE6E73;
-margin-top: 50px;
+    background-color: #EE6E73;
+    margin-top: 50px;
+}
+.card-text {
+    color: #212121
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.btn-small {
+    margin-top: 10px;
+}
+
+.modal {
+    border-radius: 8px;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-image img {
+        height: 200px;
+        object-fit: cover;
+    }
 }
