@@ -1,7 +1,7 @@
 {
-  "name": "sit725-t2-prac3",
+  "name": "sit725---4.2",
   "version": "1.0.0",
-  "description": "3.2P task",
+  "description": "4.2P task",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hemanthvinnu/SIT725-T2-prac3.git"
+    "url": "git+https://github.com/Hemanthvinnu/SIT725---4.2.git"
   },
   "keywords": [
 "Nodejs",
@@ -22,9 +22,9 @@
   "author": "Katagoni Hemanth",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hemanthvinnu/SIT725-T2-prac3/issues"
+    "url": "https://github.com/Hemanthvinnu/SIT725---4.2.git"
   },
-  "homepage": "https://github.com/Hemanthvinnu/SIT725-T2-prac3#readme",
+  "homepage": "https://github.com/Hemanthvinnu/SIT725---4.2.git#readme",
   "dependencies": {
     "express": "^5.1.0"
   }
