@@ -152,7 +152,7 @@ const submitForm = () => {
 /**
  * Shows Materialize toast notification
  * @param {string} message - Toast message
- * @param {string} color - Toast color (e.g., 'green', 'red')
+ * @param {string} color - Toast color 
  */
 const showToast = (message = 'Action completed!', color = 'green') => {
     M.toast({

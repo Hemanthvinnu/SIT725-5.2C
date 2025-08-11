@@ -27,6 +27,8 @@
   "homepage": "https://github.com/Hemanthvinnu/SIT725---4.2.git#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2",
+    "mongoose": "^8.17.1"
   }
 }

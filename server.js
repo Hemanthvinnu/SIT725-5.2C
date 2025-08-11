@@ -1,53 +1,35 @@
-const express = require("express");
-const app = express();
-const path = require('path');
-
-app.use(express.static(path.join(__dirname, 'public')));
+var express = require("express")
+var app = express()
+var port = process.env.port || 3004
+const mongoose = require('mongoose');
+// Middleware
+app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
-const cardList = [
-  {
-    title: "Kitten 1",
-    image: "images/kitten.jpg",
-    description: "Sweet little kitten saying hello!",
-    details: {
-      age: "2 months",
-      breed: "Tabby",
-      personality: "Friendly and playful"
-    }
-  },
-  {
-    title: "Kitten 2",
-    image: "images/kitten-2.jpg",
-    description: "Adorable little furball looking for cuddles",
-    details: {
-      age: "3 months",
-      breed: "Siamese",
-      personality: "Calm and affectionate"
-    }
-  },
-  {
-    title: "Kitten 3",
-    image: "images/kitten-3.jpg",
-    description: "Playful kitten ready for adventures",
-    details: {
-      age: "1.5 months",
-      breed: "Persian",
-      personality: "Energetic and curious"
-    }
-  }
-];
-
-app.get('/api/projects', (req, res) => {
-  res.json({
-    statusCode: 200,
-    data: cardList,
-    message: "Success"
-  });
+mongoose.connect('mongodb://localhost:27017/myprojectDB', {
+useNewUrlParser: true,
+useUnifiedTopology: true,
 });
-
-const port = process.env.PORT || 3000;
+mongoose.connection.on('connected', () => {
+console.log('Connected to MongoDB');
+});
+// 2. Define your schema and model
+const ProjectSchema = new mongoose.Schema({
+title: String,
+image: String,
+link: String,
+description: String,
+});
+const Project = mongoose.model('Project', ProjectSchema);
+// 3. REST API route
+app.get('/api/projects', async (req, res) => {
+const projects = await Project.find({});
+res.json({ statusCode: 200, data: projects, message: 'Success' });
+});
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+// 4. Start server
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+console.log(`App listening on port ${port}`);
 });
