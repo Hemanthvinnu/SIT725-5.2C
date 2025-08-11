@@ -12,13 +12,13 @@
     "url": "git+https://github.com/Hemanthvinnu/SIT725---4.2.git"
   },
   "keywords": [
-"Nodejs",
-"Express",
-"Materialize",
-"HTML",
-"JS",
-"CSS"
-],
+    "Nodejs",
+    "Express",
+    "Materialize",
+    "HTML",
+    "JS",
+    "CSS"
+  ],
   "author": "Katagoni Hemanth",
   "license": "ISC",
   "bugs": {
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/Hemanthvinnu/SIT725---4.2.git#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
   }
 }
